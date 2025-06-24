@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Code Cure - Empowering Global Healthcare Dispatch</title>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary: #003366;
+      --accent: #009688;
+    }
+    body {
+      font-family: 'Poppins', 'Inter', Arial, sans-serif;
+    }
+    /* Custom Tailwind config */
+    .bg-primary { background-color: var(--primary) !important; }
+    .text-primary { color: var(--primary) !important; }
+    .bg-accent { background-color: var(--accent) !important; }
+    .text-accent { color: var(--accent) !important; }
+    /* Hamburger animation */
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all 0.3s;
+      background: #fff;
+      border-radius: 2px;
+    }
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(4px, 4px);
+    }
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+  <!-- Header & Navigation -->
+  <header class="bg-primary text-white shadow-md fixed top-0 w-full z-20">
+    <nav class="container mx-auto px-4 flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <div class="w-9 h-9 bg-accent flex items-center justify-center rounded-full mr-3">
+          <span class="font-extrabold text-xl text-white">CC</span>
+        </div>
+        <span class="font-bold text-lg tracking-wide">Code Cure</span>
+      </div>
+      <!-- Desktop Nav -->
+      <ul class="hidden md:flex space-x-8 items-center font-medium">
+        <li><a href="#about" class="hover:text-accent transition">About Code Cure</a></li>
+        <li><a href="#ai-healthcare" class="hover:text-accent transition">AI monitored healthcare</a></li>
+        <li><a href="#drones-supply" class="hover:text-accent transition">Drones for supply</a></li>
+        <li><a href="#hygiene-education" class="hover:text-accent transition">Educate about hygene</a></li>
+        <li>
+          <a href="#signup" class="ml-4 px-5 py-2 bg-accent text-white rounded-full shadow hover:bg-teal-700 transition font-semibold">Sign Up</a>
+        </li>
+      </ul>
+      <!-- Hamburger Button -->
+      <button id="menu-btn" class="hamburger md:hidden flex flex-col justify-center items-center focus:outline-none" aria-label="Open main menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="md:hidden bg-primary w-full absolute left-0 top-16 shadow-lg overflow-hidden max-h-0 transition-all duration-300">
+      <ul class="flex flex-col space-y-1 p-4 font-medium">
+        <li><a href="#about" class="block py-2 hover:text-accent transition">About Code Cure</a></li>
+        <li><a href="#ai-healthcare" class="block py-2 hover:text-accent transition">AI monitored healthcare</a></li>
+        <li><a href="#drones-supply" class="block py-2 hover:text-accent transition">Drones for supply</a></li>
+        <li><a href="#hygiene-education" class="block py-2 hover:text-accent transition">Educate about hygene</a></li>
+        <li>
+          <a href="#signup" class="block py-2 mt-2 bg-accent text-white rounded-full text-center shadow hover:bg-teal-700 transition font-semibold">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="flex-1 pt-20">
+
+    <!-- Hero / About Code Cure -->
+    <section id="about" class="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0">
+        <h1 class="text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight">
+          Empowering Global Healthcare Access
+        </h1>
+        <p class="text-lg text-gray-700 mb-8">
+          Code Cure connects dispatch organizations with advanced AI, drone logistics, and education to break healthcare barriers worldwide. Together, we enable faster, safer, and more effective response for those in need—no matter where they are.
+        </p>
+        <a href="#signup" class="inline-block px-8 py-3 bg-accent text-white font-semibold rounded-full shadow hover:bg-teal-700 transition-all">Sign Up Now</a>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <!-- Placeholder illustration -->
+        <svg width="320" height="220" viewBox="0 0 320 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-80 h-56">
+          <rect width="320" height="220" rx="28" fill="#003366" fill-opacity="0.12"/>
+          <circle cx="100" cy="110" r="45" fill="#009688" fill-opacity="0.15"/>
+          <rect x="160" y="80" width="90" height="30" rx="10" fill="#009688" fill-opacity="0.18"/>
+          <rect x="180" y="130" width="60" height="20" rx="8" fill="#003366" fill-opacity="0.17"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- AI Monitored Healthcare -->
+    <section id="ai-healthcare" class="container mx-auto px-4 py-14">
+      <h2 class="text-2xl md:text-3xl font-semibold text-primary mb-4">AI Monitored Healthcare</h2>
+      <p class="text-gray-700 text-lg mb-4">
+        Harness the power of real-time AI to monitor patient vitals and optimize dispatch. Our intelligent systems support healthcare providers with instant data, making every second count in critical situations.
+      </p>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-600">
+        <li class="flex items-center"><span class="bg-accent w-3 h-3 rounded-full mr-3"></span>24/7 remote patient monitoring</li>
+        <li class="flex items-center"><span class="bg-accent w-3 h-3 rounded-full mr-3"></span>Predictive analytics for emergencies</li>
+        <li class="flex items-center"><span class="bg-accent w-3 h-3 rounded-full mr-3"></span>Seamless integration with local teams</li>
+        <li class="flex items-center"><span class="bg-accent w-3 h-3 rounded-full mr-3"></span>Data-driven, privacy-focused approach</li>
+      </ul>
+    </section>
+
+    <!-- Drones for Supply -->
+    <section id="drones-supply" class="container mx-auto px-4 py-14 bg-gray-100 rounded-xl">
+      <h2 class="text-2xl md:text-3xl font-semibold text-primary mb-4">Drones for Supply</h2>
+      <p class="text-gray-700 text-lg mb-4">
+        We leverage autonomous drones to deliver essential medical supplies to remote and inaccessible areas, ensuring no community is left behind.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <div class="flex-1 min-w-[180px] bg-white p-5 rounded-lg shadow text-center">
+          <span class="inline-block mb-2 text-accent text-4xl">🚁</span>
+          <div class="font-semibold">Rapid Dispatch</div>
+          <div class="text-sm text-gray-500">Faster delivery in crisis</div>
+        </div>
+        <div class="flex-1 min-w-[180px] bg-white p-5 rounded-lg shadow text-center">
+          <span class="inline-block mb-2 text-accent text-4xl">🌍</span>
+          <div class="font-semibold">Global Reach</div>
+          <div class="text-sm text-gray-500">Access to remote regions</div>
+        </div>
+        <div class="flex-1 min-w-[180px] bg-white p-5 rounded-lg shadow text-center">
+          <span class="inline-block mb-2 text-accent text-4xl">💊</span>
+          <div class="font-semibold">Medical Supplies</div>
+          <div class="text-sm text-gray-500">Critical meds, vaccines, and more</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Educate about hygiene -->
+    <section id="hygiene-education" class="container mx-auto px-4 py-14">
+      <h2 class="text-2xl md:text-3xl font-semibold text-primary mb-4">Educate about Hygiene</h2>
+      <p class="text-gray-700 text-lg mb-4">
+        Empowering communities starts with knowledge. We offer resources and training that promote hygiene and disease prevention, building healthier futures everywhere.
+      </p>
+      <ul class="list-disc ml-6 text-gray-600 space-y-1">
+        <li>Easy-to-understand educational resources</li>
+        <li>Workshops and remote learning for all ages</li>
+        <li>Partnering with local health leaders</li>
+      </ul>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="container mx-auto px-4 py-16">
+      <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center">
+        <svg class="w-10 h-10 text-accent mb-4" fill="none" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l2.286 7.055a1 1 0 00.95.69h7.462c.969 0 1.371 1.24.588 1.81l-6.034 4.387a1 1 0 00-.364 1.118l2.287 7.055c.3.921-.755 1.688-1.54 1.118l-6.034-4.387a1 1 0 00-1.176 0l-6.034 4.387c-.784.57-1.838-.197-1.539-1.118l2.287-7.055a1 1 0 00-.364-1.118L2.049 12.48c-.783-.57-.38-1.81.588-1.81h7.462a1 1 0 00.95-.69l2.286-7.055z" fill="currentColor"/></svg>
+        <blockquote class="text-xl font-medium text-gray-800 mb-4">
+          "Thanks to Code Cure, our dispatch teams have reached countless patients in isolated areas—with speed and confidence. The AI and drone solutions are a true game changer for global health."
+        </blockquote>
+        <div class="font-semibold text-primary">Dr. Maya Patel</div>
+        <div class="text-gray-500 text-sm">Chief Medical Officer, HealthAccess Intl.</div>
+      </div>
+    </section>
+
+    <!-- Sign Up Form (Footer CTA) -->
+    <section id="signup" class="container mx-auto px-4 pb-16">
+      <div class="max-w-lg mx-auto bg-primary text-white rounded-xl shadow-lg p-8">
+        <h2 class="text-2xl font-bold mb-2">Join Code Cure</h2>
+        <p class="mb-6 text-accent">Get updates and be part of our healthcare revolution.</p>
+        <form id="signup-form" novalidate>
+          <div class="mb-4">
+            <label for="email" class="block mb-2 text-white font-medium">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com"
+                   class="w-full px-4 py-2 rounded-lg border border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-accent transition" />
+            <p id="email-error" class="text-red-500 text-sm mt-1 hidden">Please enter a valid email address.</p>
+          </div>
+          <button type="submit" class="w-full py-3 bg-accent text-white font-semibold rounded-lg hover:bg-teal-700 transition-all">Sign Up</button>
+        </form>
+        <p id="signup-success" class="text-green-300 text-center mt-4 hidden">Thank you for signing up!</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-6 mt-auto">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-4 md:mb-0">
+        <span class="font-bold">Code Cure</span> &copy; <span id="year"></span> All rights reserved.
+      </div>
+      <div class="flex space-x-4">
+        <a href="https://twitter.com/" target="_blank" aria-label="Twitter" class="hover:text-accent transition">
+          <svg class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557a9.837 9.837 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.555-2.005.959-3.127 1.184A4.916 4.916 0 0 0 16.616 3c-2.717 0-4.924 2.206-4.924 4.924 0 .386.044.762.128 1.124C7.728 8.807 4.1 6.884 1.671 3.965a4.822 4.822 0 0 0-.665 2.475c0 1.708.87 3.215 2.188 4.099A4.903 4.903 0 0 1 .964 9.03v.062a4.924 4.924 0 0 0 3.95 4.827 4.996 4.996 0 0 1-2.212.084 4.929 4.929 0 0 0 4.6 3.417A9.867 9.867 0 0 1 0 21.542a13.945 13.945 0 0 0 7.548 2.209c9.056 0 14.009-7.514 14.009-14.009 0-.213-.005-.426-.014-.637A10.012 10.012 0 0 0 24 4.557z"/></svg>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn" class="hover:text-accent transition">
+          <svg class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 8c2.485 0 4.5 2.015 4.5 4.5v6.5a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1h16a1 1 0 011 1v2.5a1 1 0 01-2 0V5H5v14h14v-6.5a2.5 2.5 0 00-5 0V19h-2v-6.5A4.5 4.5 0 0116.5 8z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Responsive mobile nav
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('active');
+      const expanded = menuBtn.classList.contains('active');
+      menuBtn.setAttribute('aria-expanded', expanded);
+      if (expanded) {
+        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+      } else {
+        mobileMenu.style.maxHeight = '0';
+      }
+    });
+
+    // Close mobile menu on navigation click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuBtn.classList.remove('active');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        mobileMenu.style.maxHeight = '0';
+      });
+    });
+
+    // Email validation for sign up form
+    const signupForm = document.getElementById('signup-form');
+    const emailInput = document.getElementById('email');
+    const emailError = document.getElementById('email-error');
+    const signupSuccess = document.getElementById('signup-success');
+
+    signupForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = emailInput.value.trim();
+      const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+      if (!email || !emailPattern.test(email)) {
+        emailError.classList.remove('hidden');
+        emailInput.classList.add('border-red-500');
+        signupSuccess.classList.add('hidden');
+      } else {
+        emailError.classList.add('hidden');
+        emailInput.classList.remove('border-red-500');
+        signupSuccess.classList.remove('hidden');
+        signupForm.reset();
+      }
+    });
+  </script>
+</body>
+</html>
